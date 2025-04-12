@@ -1,0 +1,30 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff00ff" />
+      <stop offset="100%" stop-color="#9900ff" />
+    </linearGradient>
+    <linearGradient id="secondary-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff" />
+      <stop offset="100%" stop-color="#00ff99" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Primary color neon shape -->
+  <path d="M20,20 L100,20 L100,50 L180,50 L180,80 L20,80 Z" 
+        stroke="url(#primary-gradient)" 
+        stroke-width="4" 
+        fill="none" 
+        filter="url(#neon-glow)" />
+  
+  <!-- Secondary color neon shape -->
+  <path d="M40,35 L70,35 L70,65 L160,65" 
+        stroke="url(#secondary-gradient)" 
+        stroke-width="4" 
+        fill="none" 
+        filter="url(#neon-glow)" />
+</svg>
